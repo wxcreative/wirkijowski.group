@@ -17,8 +17,6 @@
 
   --color-background: var(--color-accent-gray-1);
   --color-foreground: #ffffff;
-
-
 }
 
 @media (prefers-color-scheme: light) {
