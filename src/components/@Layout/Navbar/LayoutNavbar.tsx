@@ -5,8 +5,9 @@ import {ReactNode} from "react";
 import {motion} from "motion/react"
 
 import {cx} from "@utils/cx";
-import Link from "next/link";
-import {NavAnchor} from "@comp/NavAnchor";
+import {NavAnchor} from "@comp/@Layout/NavAnchor";
+import {Button} from "@comp/Button";
+import {Select} from "@comp/Input";
 
 interface IProps {}
 
@@ -45,13 +46,13 @@ export function LayoutNavbar ({}: IProps): ReactNode {
 				<NavAnchor href={'/contact'}>Kontakt</NavAnchor>
 				<NavAnchor external href={'/knowledge-base'}>Baza Wiedzy</NavAnchor>
 			</ul>
-			<div>
-				<Link href={'/get-in-touch'}>Zapytaj o ofertę</Link>
-				<select>
-					<option>Polski</option>
-					<option>English</option>
-					<option>Deutsch</option>
-				</select>
+			<div className={"flex flex-row gap-4"}>
+				<Button href={'/get-in-touch'}>Zapytaj o ofertę</Button>
+				<Select>
+					<option>PL</option>
+					<option>EN</option>
+					<option>DE</option>
+				</Select>
 				<button>Theme</button>
 			</div>
 		</motion.div>
